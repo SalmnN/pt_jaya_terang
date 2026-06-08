@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PT Jaya Bersama Terang | Excellence in Food Manufacturing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(252, 249, 248, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(116, 119, 130, 0.2);
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
+        .gradient-scrim {
+            background: linear-gradient(to right, rgba(0, 43, 109, 0.9) 0%, rgba(0, 43, 109, 0.4) 50%, rgba(0, 43, 109, 0) 100%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#673b00",
+                        "surface": "#fcf9f8",
+                        "outline": "#747782",
+                        "surface-dim": "#dcd9d9",
+                        "on-primary-fixed": "#001946",
+                        "primary": "#002b6d",
+                        "secondary-fixed-dim": "#ffb4ac",
+                        "secondary": "#bb0014",
+                        "inverse-on-surface": "#f3f0ef",
+                        "primary-fixed-dim": "#b1c6ff",
+                        "surface-variant": "#e5e2e1",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdcbd",
+                        "surface-tint": "#3b5ca5",
+                        "tertiary-fixed-dim": "#ffb86f",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-low": "#f6f3f2",
+                        "on-background": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#693c00",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#e51d24",
+                        "on-surface": "#1c1b1b",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#93000d",
+                        "primary-container": "#1d428a",
+                        "surface-container-high": "#eae7e7",
+                        "surface-container": "#f0eded",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#410002",
+                        "tertiary": "#482700",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#1f438b",
+                        "on-primary-container": "#93b2ff",
+                        "outline-variant": "#c4c6d2",
+                        "on-surface-variant": "#434651",
+                        "surface-bright": "#fcf9f8",
+                        "background": "#fcf9f8",
+                        "inverse-surface": "#313030",
+                        "on-tertiary-fixed": "#2c1600",
+                        "on-secondary-container": "#fffbff",
+                        "primary-fixed": "#d9e2ff",
+                        "secondary-fixed": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ff9c1a",
+                        "inverse-primary": "#b1c6ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["IBM Plex Sans"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["IBM Plex Sans"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["IBM Plex Sans"],
+                        "headline-lg": ["IBM Plex Sans"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 bg-primary border-b border-outline-variant/20">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-on-primary" id="drawer-toggle">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<span class="text-body-lg font-headline-sm font-bold text-on-primary">PT Jaya Bersama Terang</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-tertiary-container font-bold font-label-md text-label-md transition-colors duration-200" href="index.html">Home</a>
+<a class="text-on-primary font-label-md text-label-md hover:text-on-tertiary-container transition-colors duration-200" href="about.html">About Us</a>
+<a class="text-on-primary font-label-md text-label-md hover:text-on-tertiary-container transition-colors duration-200" href="products.html">Products</a>
+<a class="text-on-primary font-label-md text-label-md hover:text-on-tertiary-container transition-colors duration-200" href="#">Distribution</a>
+<a class="text-on-primary font-label-md text-label-md hover:text-on-tertiary-container transition-colors duration-200" href="contact.html">Contact</a>
+<button class="ml-4 text-on-primary font-label-md text-label-md">EN/ID</button>
+</nav>
+<button class="md:hidden text-on-primary font-label-md text-label-md">EN/ID</button>
+</header>
+<!-- Navigation Drawer (Mobile) -->
+<div class="fixed inset-0 bg-black/50 z-[60] hidden opacity-0 transition-opacity duration-300" id="drawer-overlay"></div>
+<aside class="fixed top-0 left-0 h-full w-80 bg-surface z-[70] -translate-x-full transition-transform duration-300 shadow-md flex flex-col py-8" id="drawer">
+<div class="px-margin-mobile mb-8">
+<span class="text-headline-sm font-headline-sm text-primary">PT Jaya Bersama Terang</span>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="bg-primary text-on-primary font-semibold rounded-lg px-4 py-3 mx-2 flex items-center gap-4" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span> Home
+            </a>
+<a class="text-on-surface-variant px-4 py-3 mx-2 flex items-center gap-4 hover:bg-surface-container transition-all rounded-lg" href="about.html">
+<span class="material-symbols-outlined" data-icon="corporate_fare">corporate_fare</span> About Us
+            </a>
+<a class="text-on-surface-variant px-4 py-3 mx-2 flex items-center gap-4 hover:bg-surface-container transition-all rounded-lg" href="products.html">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span> Products
+            </a>
+<a class="text-on-surface-variant px-4 py-3 mx-2 flex items-center gap-4 hover:bg-surface-container transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span> Distribution
+            </a>
+<a class="text-on-surface-variant px-4 py-3 mx-2 flex items-center gap-4 hover:bg-surface-container transition-all rounded-lg" href="contact.html">
+<span class="material-symbols-outlined" data-icon="mail">mail</span> Contact
+            </a>
+</nav>
+</aside>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative h-[751px] min-h-[600px] w-full overflow-hidden bg-primary flex items-center px-margin-mobile md:px-margin-desktop">
+<img alt="Premium Cooking Oil and Canned Fish products" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdVpWxVFe9RdKMXEy8vcYJsdW3TBWfd55dFSYrvSIyqJTGEJ0v_MqtWM46q026ndgPsk3wcko0tuVs4WrSOJ4-8k4C6gHT6U78eaR5appbpZsuyzlxtLR5-Xwcpqcg1ovSrkw24ZMgH-kK5JQe9U6LgReV0MWfnNQeZE8zV1mA1giJR316lvqJ3EvAnLVsGsw6t4eLwWjMCQkRr2TE7dE7ZgqioqoO_tabt7KUutjtm57ER5OY0CKzB3MllrpMc5jVJvDz2mwrbTE"/>
+<div class="absolute inset-0 gradient-scrim"></div>
+<div class="relative z-10 max-w-3xl animate-in slide-in-from-left duration-700">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary mb-6 leading-tight">
+                    Delivering Quality Food Products for Every Family
+                </h1>
+<p class="font-body-lg text-body-lg text-primary-fixed mb-12 max-w-2xl">
+                    Trusted manufacturer and distributor of cooking oil and canned fish products serving customers across Indonesia and beyond.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a href="products.html" class="bg-on-tertiary-container text-tertiary-container px-8 py-4 rounded-lg font-label-md text-label-md hover:brightness-110 active:scale-95 transition-all shadow-lg font-bold inline-block text-center">
+                        Explore Products
+                    </a>
+<a href="contact.html" class="border-2 border-on-primary text-on-primary px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-on-primary hover:text-primary active:scale-95 transition-all inline-block text-center">
+                        Contact Us
+                    </a>
+</div>
+</div>
+</section>
+<!-- Why Choose Us (Bento-style Grid) -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-12 text-center md:text-left">
+<span class="text-secondary font-label-md uppercase tracking-widest mb-2 block font-bold">Our Commitment</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-primary">Why Choose Us</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Quality Standard -->
+<div class="bg-surface-container-low p-12 rounded-xl border border-outline-variant/30 hover:border-secondary transition-all group">
+<div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 text-on-tertiary-container group-hover:scale-110 transition-transform shadow-md">
+<span class="material-symbols-outlined text-4xl" data-icon="verified_user">verified_user</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">High Quality Standards</h3>
+<p class="text-on-surface-variant">We utilize advanced manufacturing technology to ensure every bottle of oil and every can of fish meets world-class quality specifications.</p>
+</div>
+<!-- Food Safety -->
+<div class="bg-surface-container-low p-12 rounded-xl border border-outline-variant/30 hover:border-secondary transition-all group">
+<div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 text-on-tertiary-container group-hover:scale-110 transition-transform shadow-md">
+<span class="material-symbols-outlined text-4xl" data-icon="health_and_safety">health_and_safety</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Food Safety First</h3>
+<p class="text-on-surface-variant">Our facilities are ISO and Halal certified, maintaining rigorous hygiene protocols from raw material sourcing to final distribution.</p>
+</div>
+<!-- Reliable Distribution -->
+<div class="bg-surface-container-low p-12 rounded-xl border border-outline-variant/30 hover:border-secondary transition-all group">
+<div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 text-on-tertiary-container group-hover:scale-110 transition-transform shadow-md">
+<span class="material-symbols-outlined text-4xl" data-icon="local_shipping">local_shipping</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Reliable Distribution</h3>
+<p class="text-on-surface-variant">A robust logistics network across the Indonesian archipelago ensures that our products reach retail partners and consumers on time.</p>
+</div>
+</div>
+</section>
+<!-- Manufacturing & Distribution (Asymmetric Layout) -->
+<section class="bg-primary text-on-primary py-24 overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl relative z-10 border border-white/10">
+<img alt="Industrial manufacturing facility" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJvdDxXtXv5J2cHpPNPk-3sOGa2bDT12qQK8-raj25unsCKqew0IHHUkav7ZxGPEnNxHTyG-j0a1x_z-gf-SvwpEVRlzW9bmr1wzzVUOm7lfuPtf5bPqxNsQ_uWf6Tk_JA6GAXUasxmP2zeBPWzHAG7d69uVhYGTyeeoKVy-8mL7BptNlE4mQ1K0FsmaXAt-5dL4FevM27MU_i72mQL8zt89NEAbd5PgK68Sju_yc7S1ZwSq4loD-qNxtuER0uxuFlI29GJz8KYUI"/>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
+</div>
+<div class="space-y-8 lg:pl-12">
+<span class="text-on-tertiary-container font-label-md uppercase tracking-widest font-bold">Logistics &amp; Operations</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg leading-tight">Scale-Powered Excellence in Production</h2>
+<p class="text-body-lg text-primary-fixed-dim">
+                        With over two decades of industry expertise, PT Jaya Bersama Terang manages a seamless supply chain from state-of-the-art refining facilities to a nationwide distribution network. Our logistics infrastructure is designed to handle industrial scale while maintaining the delicate freshness of our food products.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="check_circle">check_circle</span>
+<span class="font-label-md text-on-primary">Automated Production Lines</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="check_circle">check_circle</span>
+<span class="font-label-md text-on-primary">Climate-Controlled Warehousing</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="check_circle">check_circle</span>
+<span class="font-label-md text-on-primary">Real-time GPS Fleet Tracking</span>
+</li>
+</ul>
+<a href="about.html" class="bg-on-tertiary-container text-tertiary-container px-12 py-4 rounded-lg font-label-md font-bold hover:brightness-110 transition-all shadow-lg inline-block text-center">
+                        Learn About Our Capacity
+                    </a>
+</div>
+</div>
+</section>
+<!-- Business Partners (Marquee) -->
+<section class="py-24 bg-surface">
+<div class="px-margin-mobile md:px-margin-desktop text-center mb-12">
+<h2 class="font-headline-md text-primary">Trusted by Businesses Across Indonesia</h2>
+<div class="w-20 h-1 bg-secondary mx-auto mt-4"></div>
+</div>
+<div class="relative flex overflow-x-hidden group">
+<div class="py-12 animate-marquee whitespace-nowrap flex items-center">
+<div class="mx-12 h-12 w-48 bg-outline-variant/20 rounded flex items-center justify-center font-bold text-outline uppercase tracking-widest">Retail Giant</div>
+<div class="mx-12 h-12 w-48 bg-outline-variant/20 rounded flex items-center justify-center font-bold text-outline uppercase tracking-widest">Indo-Market</div>
+<div class="mx-12 h-12 w-48 bg-outline-variant/20 rounded flex items-center justify-center font-bold text-outline uppercase tracking-widest">Global Food Co</div>
+<div class="mx-12 h-12 w-48 bg-outline-variant/20 rounded flex items-center justify-center font-bold text-outline uppercase tracking-widest">Nusa Mart</div>
+<div class="mx-12 h-12 w-48 bg-outline-variant/20 rounded flex items-center justify-center font-bold text-outline uppercase tracking-widest">Eco Supply</div>
+<div class="mx-12 h-12 w-48 bg-outline-variant/20 rounded flex items-center justify-center font-bold text-outline uppercase tracking-widest">Urban Fresh</div>
+</div>
+<div aria-hidden="true" class="absolute top-0 py-12 animate-marquee whitespace-nowrap flex items-center">
+<div class="mx-12 h-12 w-48 bg-outline-variant/20 rounded flex items-center justify-center font-bold text-outline uppercase tracking-widest">Retail Giant</div>
+<div class="mx-12 h-12 w-48 bg-outline-variant/20 rounded flex items-center justify-center font-bold text-outline uppercase tracking-widest">Indo-Market</div>
+<div class="mx-12 h-12 w-48 bg-outline-variant/20 rounded flex items-center justify-center font-bold text-outline uppercase tracking-widest">Global Food Co</div>
+<div class="mx-12 h-12 w-48 bg-outline-variant/20 rounded flex items-center justify-center font-bold text-outline uppercase tracking-widest">Nusa Mart</div>
+<div class="mx-12 h-12 w-48 bg-outline-variant/20 rounded flex items-center justify-center font-bold text-outline uppercase tracking-widest">Eco Supply</div>
+<div class="mx-12 h-12 w-48 bg-outline-variant/20 rounded flex items-center justify-center font-bold text-outline uppercase tracking-widest">Urban Fresh</div>
+</div>
+</div>
+</section>
+<!-- News & Updates -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<div>
+<span class="text-secondary font-label-md uppercase tracking-widest mb-2 block font-bold">Inside PT JBT</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-primary">Corporate News</h2>
+</div>
+<button class="text-primary font-label-md hover:text-secondary transition-colors flex items-center gap-2 font-bold">
+                    View All News <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- News Card 1 -->
+<article class="bg-surface border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Laboratory quality testing" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1bYg6YrPO2Mo2_lrfBzs_HVN2_2KSaK5uL1UFPu0VCkemWFwWuJxpquX-22Ws3eJbNJl4C8jkCKnqky_3f_LVCv3z-zLev-a6USVLSBzkSsBNQKsyPQnRV1zki5fXClEI_myDxrsbKS660iL9_nfrMBoDP-rlFE3-jc0tvjV6vQFP-g0kKDxmYz9vFrb3lwGNgugyRl9SgSEM6BGeBQYUkh8ATrXBPMWfyLbHtEgRkL0yQbld8Vok9mtfgxeqBoirBQmT0FigVoA"/>
+</div>
+<div class="p-8">
+<span class="text-label-sm font-label-sm text-on-primary bg-primary px-3 py-1 rounded-full mb-4 inline-block font-bold">Expansion</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2 leading-snug">New Refining Facility Inaugurated in Surabaya</h3>
+<p class="text-on-surface-variant text-body-md mb-6">Expanding our capacity to meet growing regional demands for premium cooking oil products...</p>
+<time class="text-label-sm text-outline font-medium">Oct 24, 2024</time>
+</div>
+</article>
+<!-- News Card 2 -->
+<article class="bg-surface border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Retail shelves" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNqcR-jEClUOwB0emkloEhJu_CrhGeT9Br6-a1-GOulMyfuvrx4NeZBsz7HU6aZr8kQpDcQ_MAWfmsICgag_-lUDZLO2NOqG-Mupy7EbWqBldbl67xA7QByVxIR35eDNAw0YRUGQLND8P9tUN7oftv3R9xTF6JFUCG5NC5pwVJOLokR6kVN_qcYJwiNifewupwKgH7tCgGV1rSwhwfFFwToc_20eBO_IH1RW-ej0ydImhw1OCtGuYhyPQrG8UHR36FX0QIYrtQdII"/>
+</div>
+<div class="p-8">
+<span class="text-label-sm font-label-sm text-on-primary bg-secondary px-3 py-1 rounded-full mb-4 inline-block font-bold">Sustainability</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2 leading-snug">JBT Achieves 100% Sustainable Sourcing Goal</h3>
+<p class="text-on-surface-variant text-body-md mb-6">Confirming our commitment to environmentally responsible manufacturing processes across our fish and oil lines...</p>
+<time class="text-label-sm text-outline font-medium">Oct 12, 2024</time>
+</div>
+</article>
+<!-- News Card 3 -->
+<article class="bg-surface border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-xl transition-all">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Logistics warehouse" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzvl1vu5iKfPfQL7iUe5fkUhs7LwYksrupOmuehNZS5D7IFcBJxfnvwDJNBimE4KM2rWgBJtAUF8s0NvEsfmktEhi0nFIKQWaDubWrR_b_OO-pb2ctvuRm835HRAwhbvcL0cn7bsn_ecCrBTbUio-eP6pNusVqPNlWxg3F3uaAfW61TM4gQRfPX5-xqIiIbNzyYCpaROt0jYELqPShMc3ljOdcgLeUG8iMo_3JqHH-uCC0enX_7bPobT5W35CCqv7mYZGj3XbbfEU"/>
+</div>
+<div class="p-8">
+<span class="text-label-sm font-label-sm text-on-primary bg-primary px-3 py-1 rounded-full mb-4 inline-block font-bold">Distribution</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2 leading-snug">Strengthening the Archipelago Logistics Backbone</h3>
+<p class="text-on-surface-variant text-body-md mb-6">Integrating AI-driven routing to reduce carbon footprint and delivery timelines for our partners...</p>
+<time class="text-label-sm text-outline font-medium">Sep 28, 2024</time>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-24 px-margin-mobile md:px-margin-desktop bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<h4 class="font-headline-sm text-headline-sm text-on-tertiary-container mb-8">PT Jaya Bersama Terang</h4>
+<p class="text-primary-fixed-dim text-body-md mb-8">Leading FMCG manufacturer dedicated to high-quality cooking oils and canned seafood products.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-on-tertiary-container hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-on-tertiary-container hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="language">language</span></a>
+</div>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-primary font-bold mb-8 uppercase tracking-wider">Quick Links</h5>
+<ul class="space-y-3 text-primary-fixed-dim">
+<li><a class="hover:text-on-tertiary-container transition-colors" href="index.html">Home</a></li>
+<li><a class="hover:text-on-tertiary-container transition-colors" href="about.html">About Us</a></li>
+<li><a class="hover:text-on-tertiary-container transition-colors" href="products.html">Products</a></li>
+<li><a class="hover:text-on-tertiary-container transition-colors" href="#">Distribution</a></li>
+<li><a class="hover:text-on-tertiary-container transition-colors" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-primary font-bold mb-8 uppercase tracking-wider">Categories</h5>
+<ul class="space-y-3 text-primary-fixed-dim">
+<li><a class="hover:text-on-tertiary-container transition-colors" href="products.html">Tamer Cooking Oil</a></li>
+<li><a class="hover:text-on-tertiary-container transition-colors" href="products.html">Brilian Canned Fish</a></li>
+<li><a class="hover:text-on-tertiary-container transition-colors" href="products.html">Industrial Supplies</a></li>
+<li><a class="hover:text-on-tertiary-container transition-colors" href="products.html">Export Partnerships</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-primary font-bold mb-8 uppercase tracking-wider">Connect</h5>
+<p class="text-primary-fixed-dim text-body-md mb-6">Subscribe to our newsletter for the latest corporate updates and market insights.</p>
+<div class="flex">
+<input class="bg-white/10 border-white/20 text-white px-4 py-2 rounded-l w-full focus:ring-1 focus:ring-on-tertiary-container border-r-0 outline-none" placeholder="Email Address" type="email"/>
+<button class="bg-on-tertiary-container text-tertiary-container px-6 py-2 rounded-r font-bold hover:brightness-110 active:opacity-70 transition-all">Join</button>
+</div>
+</div>
+<div class="col-span-1 md:col-span-4 mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-label-sm text-primary-fixed-dim opacity-70">© 2024 PT Jaya Bersama Terang. All Rights Reserved.</p>
+<div class="flex gap-8 text-label-sm text-primary-fixed-dim opacity-70">
+<a class="hover:text-on-tertiary-container transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-on-tertiary-container transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Drawer Interactions
+        const drawerToggle = document.getElementById('drawer-toggle');
+        const drawer = document.getElementById('drawer');
+        const overlay = document.getElementById('drawer-overlay');
+
+        function toggleDrawer() {
+            const isOpen = drawer.classList.contains('translate-x-0');
+            if (isOpen) {
+                drawer.classList.replace('translate-x-0', '-translate-x-full');
+                overlay.classList.add('hidden');
+                overlay.classList.replace('opacity-100', 'opacity-0');
+                document.body.style.overflow = '';
+            } else {
+                drawer.classList.replace('-translate-x-full', 'translate-x-0');
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.classList.replace('opacity-0', 'opacity-100'), 10);
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        drawerToggle.addEventListener('click', toggleDrawer);
+        overlay.addEventListener('click', toggleDrawer);
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-xl', 'bg-primary/95', 'backdrop-blur-md');
+                header.classList.remove('bg-primary');
+            } else {
+                header.classList.remove('shadow-xl', 'bg-primary/95', 'backdrop-blur-md');
+                header.classList.add('bg-primary');
+            }
+        });
+    </script>
+</body></html>

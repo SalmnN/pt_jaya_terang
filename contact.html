@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | PT Jaya Bersama Terang</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, .font-headline {
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid #c4c6d2;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#673b00",
+                        "surface": "#fcf9f8",
+                        "outline": "#747782",
+                        "surface-dim": "#dcd9d9",
+                        "on-primary-fixed": "#001946",
+                        "primary": "#002b6d",
+                        "secondary-fixed-dim": "#ffb4ac",
+                        "secondary": "#bb0014",
+                        "inverse-on-surface": "#f3f0ef",
+                        "primary-fixed-dim": "#b1c6ff",
+                        "surface-variant": "#e5e2e1",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdcbd",
+                        "surface-tint": "#3b5ca5",
+                        "tertiary-fixed-dim": "#ffb86f",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-low": "#f6f3f2",
+                        "on-background": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#693c00",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#e51d24",
+                        "on-surface": "#1c1b1b",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#93000d",
+                        "primary-container": "#1d428a",
+                        "surface-container-high": "#eae7e7",
+                        "surface-container": "#f0eded",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#410002",
+                        "tertiary": "#482700",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#1f438b",
+                        "on-primary-container": "#93b2ff",
+                        "outline-variant": "#c4c6d2",
+                        "on-surface-variant": "#434651",
+                        "surface-bright": "#fcf9f8",
+                        "background": "#fcf9f8",
+                        "inverse-surface": "#313030",
+                        "on-tertiary-fixed": "#2c1600",
+                        "on-secondary-container": "#fffbff",
+                        "primary-fixed": "#d9e2ff",
+                        "secondary-fixed": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ff9c1a",
+                        "inverse-primary": "#b1c6ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "headline": ["IBM Plex Sans"],
+                        "body": ["Inter"],
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 bg-surface border-b border-outline-variant">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-primary-container" onclick="toggleDrawer()">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<span class="text-xl md:text-2xl font-headline font-bold text-primary-container">PT Jaya Bersama Terang</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="index.html">Home</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="about.html">About Us</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="products.html">Products</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Distribution</a>
+<a class="text-secondary font-bold font-label-md border-b-2 border-secondary" href="contact.html">Contact</a>
+</nav>
+<div class="text-primary-container font-label-md font-semibold">EN/ID</div>
+</header>
+<!-- Navigation Drawer (Mobile) -->
+<div class="fixed inset-0 z-[60] hidden" id="drawer">
+<div class="absolute inset-0 bg-black/40" onclick="toggleDrawer()"></div>
+<div class="absolute top-0 left-0 h-full w-80 bg-surface shadow-md flex flex-col py-6 transform transition-transform duration-300 -translate-x-full" id="drawer-content">
+<div class="px-6 mb-8 flex justify-between items-center">
+<span class="text-xl font-headline font-bold text-primary-container">JBT Group</span>
+<button class="text-on-surface-variant" onclick="toggleDrawer()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col">
+<a class="text-on-surface-variant px-6 py-4 hover:bg-surface-container" href="index.html">Home</a>
+<a class="text-on-surface-variant px-6 py-4 hover:bg-surface-container" href="about.html">About Us</a>
+<a class="text-on-surface-variant px-6 py-4 hover:bg-surface-container" href="products.html">Products</a>
+<a class="text-on-surface-variant px-6 py-4 hover:bg-surface-container" href="#">Distribution</a>
+<a class="text-secondary font-bold px-6 py-4 bg-secondary-container/10" href="contact.html">Contact</a>
+</nav>
+</div>
+</div>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative h-[400px] flex items-center overflow-hidden bg-primary-container">
+<div class="absolute inset-0 opacity-40">
+<img class="w-full h-full object-cover" data-alt="A sophisticated corporate headquarters interior with high ceilings and expansive glass walls, bathed in soft morning light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqKZIFMJR1eIqRyrGfUuT4ObGdhIz7PtdMZLm5GWYkrfwscrLaERg3U90ToE9sKpQIz5D3Xg6Q3pUnivK0nZqEU2CoKNLeEsgI6pptp2rchAtUiw5l6_Nm0-Juxu0wIpEaDw7qaAZaK8FaLpPCMTLajIn4vgd5dafnHdRLFUQbls1G6yIS8jyiRnoGzsDkTma-l5hd7IwLbOpDsbuKqAWKveHjBzj_nh_XggCk7To0nGkBLIetpOQV1afe_juInGOgiDq_PPIAIYc"/>
+</div>
+<div class="relative container mx-auto px-margin-mobile md:px-margin-desktop z-10">
+<div class="max-w-2xl">
+<h1 class="font-headline text-headline-lg-mobile md:text-headline-lg text-on-primary mb-4 leading-tight">
+                        Contact Our International Team
+                    </h1>
+<p class="font-body text-body-lg text-on-primary/90">
+                        Connecting world-class manufacturing excellence with regional distribution partners across the globe.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Contact Content -->
+<section class="py-16 container mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Contact Info -->
+<div class="lg:col-span-5 space-y-12">
+<div>
+<h2 class="font-headline text-headline-sm text-primary-container mb-8 flex items-center gap-2">
+<span class="w-8 h-1 bg-secondary inline-block"></span>
+                            Global Headquarters
+                        </h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="location_on">location_on</span>
+<div>
+<p class="font-bold text-label-md text-primary-container mb-1">Office Address</p>
+<p class="text-body-md text-on-surface-variant">Jl. Industri Raya Blok J No. 12, Kawasan Industri, Jakarta, Indonesia 14410</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="call">call</span>
+<div>
+<p class="font-bold text-label-md text-primary-container mb-1">Phone Number</p>
+<p class="text-body-md text-on-surface-variant">+62 21 555 0123</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="mail">mail</span>
+<div>
+<p class="font-bold text-label-md text-primary-container mb-1">Email Inquiries</p>
+<p class="text-body-md text-on-surface-variant">contact@jayabersamaterang.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-8 bg-surface-container rounded-xl border border-outline-variant">
+<h3 class="font-headline text-headline-sm text-primary-container mb-2">Quick Connect</h3>
+<p class="text-body-md text-on-surface-variant mb-6">For urgent supply chain or distribution inquiries, reach out via WhatsApp.</p>
+<a class="inline-flex items-center gap-2 bg-on-tertiary-container text-on-tertiary-fixed font-bold px-8 py-3 rounded-full hover:opacity-90 transition-all active:scale-95 shadow-lg" href="https://wa.me/62215550123">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                            WhatsApp Inquiry
+                        </a>
+</div>
+<!-- Map Placeholder -->
+<div class="rounded-xl overflow-hidden border border-outline-variant h-64 grayscale hover:grayscale-0 transition-all duration-500 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist topographical map view of an industrial district in Jakarta." data-location="Jakarta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwvcxr7pP16F7Opob3ArM2onNz7_IYWiukelo2rLFoybUy_8T91lUOzxG2P-GN5DqQUQHdJbgKUR_65Cy6snYbQjYV5AgiJXTcsEiBwFQb8_pjL8G12jmlthFFirD6Zwe-pjScdtqmdWG5LQjKzCsYVoCLe7B8aOapI08s8_U9ykyjq6meNgA0so13fkMjImUYoSl3Jdd-oHFjHJBomMAC5NnTCKHn9LV-D2FjfV48tYV4X2wAHZiBAbR-efmsej_tU8DiouPTe6k"/>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="lg:col-span-7">
+<div class="glass-card p-8 md:p-12 rounded-xl shadow-xl">
+<h2 class="font-headline text-headline-sm text-primary-container mb-8">Business Inquiry Form</h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-bold text-label-sm text-primary-container">Full Name</label>
+<input class="border-outline-variant border rounded p-3 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-bold text-label-sm text-primary-container">Company Name</label>
+<input class="border-outline-variant border rounded p-3 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all" placeholder="Global Retail Ltd." type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-bold text-label-sm text-primary-container">Email Address</label>
+<input class="border-outline-variant border rounded p-3 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all" placeholder="john@company.com" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-bold text-label-sm text-primary-container">Phone Number</label>
+<input class="border-outline-variant border rounded p-3 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all" placeholder="+62 812..." type="tel"/>
+</div>
+<div class="md:col-span-2 flex flex-col gap-2">
+<label class="font-bold text-label-sm text-primary-container">Your Message</label>
+<textarea class="border-outline-variant border rounded p-3 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all resize-none" placeholder="Describe your inquiry..." rows="6"></textarea>
+</div>
+<div class="md:col-span-2 mt-4">
+<button class="w-full bg-on-tertiary-container text-on-tertiary-fixed py-4 rounded-lg font-bold text-lg hover:brightness-110 transition-all active:scale-[0.98] shadow-md" type="submit">
+                                    Submit Message
+                                </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-12 bg-primary-container text-on-primary">
+<div class="md:col-span-1">
+<span class="font-headline text-2xl font-bold text-on-tertiary-container mb-4 block">PT Jaya Bersama Terang</span>
+<p class="text-body-md text-on-primary-container leading-relaxed">Leading the industry in premium FMCG manufacturing and global logistics solutions.</p>
+</div>
+<div class="flex flex-col gap-3">
+<p class="text-label-md text-on-primary font-bold mb-2">Quick Links</p>
+<a class="text-on-primary-container hover:text-on-tertiary-container transition-colors" href="index.html">Home</a>
+<a class="text-on-primary-container hover:text-on-tertiary-container transition-colors" href="about.html">About</a>
+<a class="text-on-primary-container hover:text-on-tertiary-container transition-colors" href="products.html">Products</a>
+<a class="text-on-primary-container hover:text-on-tertiary-container transition-colors" href="#">Distribution</a>
+</div>
+<div class="flex flex-col gap-3">
+<p class="text-label-md text-on-primary font-bold mb-2">Legal</p>
+<a class="text-on-primary-container hover:text-on-tertiary-container transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-primary-container hover:text-on-tertiary-container transition-colors" href="#">Terms of Service</a>
+<a class="text-on-primary-container hover:text-on-tertiary-container transition-colors" href="#">Quality Assurance</a>
+</div>
+<div class="flex flex-col gap-4">
+<p class="text-label-md text-on-primary font-bold">Copyright</p>
+<p class="text-body-md text-on-primary-container">© 2024 PT Jaya Bersama Terang. All Rights Reserved.</p>
+<div class="flex gap-4 mt-2">
+<a class="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+</div>
+</div>
+</footer>
+<script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            const content = document.getElementById('drawer-content');
+            
+            if (drawer.classList.contains('hidden')) {
+                drawer.classList.remove('hidden');
+                setTimeout(() => content.classList.remove('-translate-x-full'), 10);
+            } else {
+                content.classList.add('-translate-x-full');
+                setTimeout(() => drawer.classList.add('hidden'), 300);
+            }
+        }
+
+        // Form submission micro-interaction
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+            
+            setTimeout(() => {
+                btn.innerText = 'Message Sent Successfully';
+                btn.style.backgroundColor = '#10b981'; // Keep functional green for success
+                btn.style.color = '#ffffff';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = '';
+                    btn.style.color = '';
+                    btn.disabled = false;
+                    btn.style.opacity = '1';
+                    this.reset();
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body></html>

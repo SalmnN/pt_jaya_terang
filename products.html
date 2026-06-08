@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Products | PT Jaya Bersama Terang</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config Verbatim -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#673b00",
+                        "surface": "#fcf9f8",
+                        "outline": "#747782",
+                        "surface-dim": "#dcd9d9",
+                        "on-primary-fixed": "#001946",
+                        "primary": "#002b6d",
+                        "secondary-fixed-dim": "#ffb4ac",
+                        "secondary": "#bb0014",
+                        "inverse-on-surface": "#f3f0ef",
+                        "primary-fixed-dim": "#b1c6ff",
+                        "surface-variant": "#e5e2e1",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdcbd",
+                        "surface-tint": "#3b5ca5",
+                        "tertiary-fixed-dim": "#ffb86f",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-low": "#f6f3f2",
+                        "on-background": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#693c00",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#e51d24",
+                        "on-surface": "#1c1b1b",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#93000d",
+                        "primary-container": "#1d428a",
+                        "surface-container-high": "#eae7e7",
+                        "surface-container": "#f0eded",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#410002",
+                        "tertiary": "#482700",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#1f438b",
+                        "on-primary-container": "#93b2ff",
+                        "outline-variant": "#c4c6d2",
+                        "on-surface-variant": "#434651",
+                        "surface-bright": "#fcf9f8",
+                        "background": "#fcf9f8",
+                        "inverse-surface": "#313030",
+                        "on-tertiary-fixed": "#2c1600",
+                        "on-secondary-container": "#fffbff",
+                        "primary-fixed": "#d9e2ff",
+                        "secondary-fixed": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ff9c1a",
+                        "inverse-primary": "#b1c6ff",
+                        "gold-accent": "#ff9c1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px",
+                        "unit-xl": "48px",
+                        "unit-lg": "24px",
+                        "unit-md": "16px",
+                        "unit-sm": "8px",
+                        "unit-xxl": "96px",
+                        "unit-xs": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["IBM Plex Sans"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["IBM Plex Sans"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["IBM Plex Sans"],
+                        "headline-lg": ["IBM Plex Sans"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scrim-overlay {
+            background: linear-gradient(180deg, rgba(0, 43, 109, 0.6) 0%, rgba(0, 43, 109, 0.8) 100%);
+        }
+        .product-card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(0, 43, 109, 0.15);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- Shared Component: TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 bg-surface border-b border-outline-variant">
+<div class="flex items-center gap-unit-md">
+<button class="md:hidden text-primary-container" onclick="toggleDrawer()">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<span class="text-body-lg font-headline-sm font-bold text-primary-container">PT Jaya Bersama Terang</span>
+</div>
+<nav class="hidden md:flex gap-unit-xl">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-200" href="index.html">Home</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-200" href="about.html">About Us</a>
+<a class="text-primary-container font-bold font-label-md text-label-md" href="products.html">Products</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-200" href="#">Distribution</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-200" href="contact.html">Contact</a>
+</nav>
+<div class="flex items-center">
+<button class="text-primary-container font-label-md text-label-md flex items-center gap-unit-xs">
+                EN/ID
+                <span class="material-symbols-outlined text-[18px]">language</span>
+</button>
+</div>
+</header>
+<!-- Shared Component: NavigationDrawer (Mobile) -->
+<div class="fixed inset-0 bg-black/40 z-[60] hidden backdrop-blur-sm" id="drawer-overlay" onclick="toggleDrawer()"></div>
+<aside class="fixed top-0 left-0 h-full w-80 bg-surface z-[70] -translate-x-full transition-transform duration-300 shadow-md border-r border-outline-variant" id="nav-drawer">
+<div class="flex flex-col py-unit-lg h-full">
+<div class="px-unit-lg mb-unit-xl">
+<h2 class="text-headline-sm font-headline-sm text-primary-container">PT Jaya Bersama Terang</h2>
+</div>
+<nav class="flex flex-col gap-unit-xs">
+<a class="text-on-surface-variant px-4 py-3 mx-2 flex items-center gap-unit-md hover:bg-surface-container-high transition-colors" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 mx-2 flex items-center gap-unit-md hover:bg-surface-container-high transition-colors" href="about.html">
+<span class="material-symbols-outlined">corporate_fare</span>
+<span class="font-label-md text-label-md">About Us</span>
+</a>
+<a class="bg-primary-container text-on-primary rounded px-4 py-3 mx-2 flex items-center gap-unit-md" href="products.html">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-md text-label-md">Products</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 mx-2 flex items-center gap-unit-md hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="font-label-md text-label-md">Distribution</span>
+</a>
+<a class="text-on-surface-variant px-4 py-3 mx-2 flex items-center gap-unit-md hover:bg-surface-container-high transition-colors" href="contact.html">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-md text-label-md">Contact</span>
+</a>
+</nav>
+</div>
+</aside>
+<main class="pt-24 pb-unit-xxl">
+<!-- Hero Header -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-unit-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-unit-lg">
+<div class="max-w-2xl">
+<span class="text-secondary font-label-md text-label-md tracking-widest uppercase mb-unit-xs block">Premium Portfolio</span>
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary-container mb-unit-sm">Our Product Catalog</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant">Discover our range of world-class FMCG products, manufactured with precision and delivered with excellence to international retail partners.</p>
+</div>
+</div>
+</section>
+<!-- Search & Filters -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop sticky top-16 bg-surface/95 backdrop-blur-md z-40 py-unit-md mb-unit-xl border-b border-surface-container">
+<div class="flex flex-col md:flex-row gap-unit-md items-center justify-between">
+<!-- Search -->
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-unit-md top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-unit-md py-3 bg-white border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary-container focus:border-primary-container outline-none transition-all font-body-md" placeholder="Search products..." type="text"/>
+</div>
+<!-- Categories -->
+<div class="flex gap-unit-sm overflow-x-auto pb-unit-xs md:pb-0 w-full md:w-auto scrollbar-hide">
+<button class="whitespace-nowrap px-unit-lg py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm">All Products</button>
+<button class="whitespace-nowrap px-unit-lg py-2 rounded-full bg-white border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors">Cooking Oil</button>
+<button class="whitespace-nowrap px-unit-lg py-2 rounded-full bg-white border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors">Canned Fish</button>
+<button class="whitespace-nowrap px-unit-lg py-2 rounded-full bg-white border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-low transition-colors">Seafood</button>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product 1: Tamer Cooking Oil -->
+<div class="product-card-hover bg-white border border-outline-variant rounded-xl overflow-hidden transition-all duration-300 flex flex-col">
+<div class="aspect-square bg-white flex items-center justify-center p-unit-lg">
+<!-- Placeholder for missing image consistency -->
+<div class="w-full h-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-6xl">image</span>
+</div>
+</div>
+<div class="p-unit-lg flex flex-col flex-grow">
+<div class="mb-unit-md flex-grow">
+<h3 class="text-headline-sm font-headline-sm text-primary-container mb-unit-xs">Tamer Cooking Oil</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-unit-md leading-relaxed">High-quality cooking oil for household and commercial use.</p>
+<div class="flex items-center gap-unit-sm text-label-sm font-label-sm text-outline">
+<span class="material-symbols-outlined text-[18px] text-gold-accent">inventory</span>
+                                Packaging: 1L, 2L, 5L PET Bottles
+                            </div>
+</div>
+<a href="contact.html" class="w-full bg-gold-accent text-on-tertiary-fixed font-label-md text-label-md py-3 rounded-lg hover:brightness-95 active:scale-[0.98] transition-all flex items-center justify-center gap-unit-sm shadow-sm text-center">
+                            Product Inquiry
+                            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Product 2: Brilian Sardines -->
+<div class="product-card-hover bg-white border border-outline-variant rounded-xl overflow-hidden transition-all duration-300 flex flex-col">
+<div class="aspect-square bg-white flex items-center justify-center p-unit-lg">
+<img alt="Brilian Sardines" class="max-h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnuCo-AIbzAFUaC2g2vutNEd-_ZwJPdjD7sTgi9oQ1gfGDWFivnT53Dfh8wZy6W-bL3FgBAv0kJFHCo6qGBOqB0rD-RpJ76AKHrozc08S351-0UFhJjKpRmUZ1MmQ1udFG5mqqnBHGLdrBGYo_vG1gIOgMeUsNbk0WssVSIEZfbx-hqKNHjGtokA5OITIHT6ofxDpa_cXEA1_aLwHcPe5b6stj8es8i_yu95effu1h_9p3x3alEWEJmZWlh1AkyvGIMKZPw2NOvyE"/>
+</div>
+<div class="p-unit-lg flex flex-col flex-grow">
+<div class="mb-unit-md flex-grow">
+<h3 class="text-headline-sm font-headline-sm text-primary-container mb-unit-xs">Brilian Sardines</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-unit-md leading-relaxed">Nutritious sardines in rich tomato sauce.</p>
+<div class="flex items-center gap-unit-sm text-label-sm font-label-sm text-outline">
+<span class="material-symbols-outlined text-[18px] text-gold-accent">inventory</span>
+                                Packaging: 155g, 425g Cans
+                            </div>
+</div>
+<a href="contact.html" class="w-full bg-gold-accent text-on-tertiary-fixed font-label-md text-label-md py-3 rounded-lg hover:brightness-95 active:scale-[0.98] transition-all flex items-center justify-center gap-unit-sm shadow-sm text-center">
+                            Product Inquiry
+                            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Product 3: Brilian Tuna Fish -->
+<div class="product-card-hover bg-white border border-outline-variant rounded-xl overflow-hidden transition-all duration-300 flex flex-col">
+<div class="aspect-square bg-white flex items-center justify-center p-unit-lg">
+<img alt="Brilian Tuna Fish" class="max-h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1JRBOF13Imsn4j1MKQF_S8dlFhDkFUkv0YMSr9dPxVTBb_LpxZKdHLjEKbCXb07y3RS9zdKXx3FcgNog_u_MLM-9B4CT50oGG8cI_C6vKedCAT7uvZB3a3hnc-d6OAqHsYifDHPr7ASKQgKOBpxDGWXuu5_zAhThwVon1SqN_Kugndi1uUDgMeyUTMFISuDQByS54ThAaiheqoUkn3EunaniLUIj7Zbm3GMo4rJQB7GJouCmtuVo9ijch_HS3tMz-zBQlqF-3pl0"/>
+</div>
+<div class="p-unit-lg flex flex-col flex-grow">
+<div class="mb-unit-md flex-grow">
+<h3 class="text-headline-sm font-headline-sm text-primary-container mb-unit-xs">Brilian Tuna Fish</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-unit-md leading-relaxed">Premium canned tuna with selected ingredients.</p>
+<div class="flex items-center gap-unit-sm text-label-sm font-label-sm text-outline">
+<span class="material-symbols-outlined text-[18px] text-gold-accent">inventory</span>
+                                Packaging: 185g Easy-open Cans
+                            </div>
+</div>
+<a href="contact.html" class="w-full bg-gold-accent text-on-tertiary-fixed font-label-md text-label-md py-3 rounded-lg hover:brightness-95 active:scale-[0.98] transition-all flex items-center justify-center gap-unit-sm shadow-sm text-center">
+                            Product Inquiry
+                            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Product 4: Indo Brilian Products -->
+<div class="product-card-hover bg-white border border-outline-variant rounded-xl overflow-hidden transition-all duration-300 flex flex-col">
+<div class="aspect-square bg-white flex items-center justify-center p-unit-lg">
+<img alt="Indo Brilian Products" class="max-h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQF3TbiYUt890cmmLKD1D3fdzfgpvAeP6bL3Gxnd5ZnJcC6UPAYuYQj_Ou-vezn3oRY6vpbQTRAXdzXNlybj3vaj13WSkAhkHZhrixT1PyW58Ivev9_yRUZ90aWHJHfiwSYnirojIyO1vpUMMVzyZWpUjVoN1ccsiW-oR5Pn-wQQQW7aGdu5adnSOcTi0i8WwsF6UwL5rgh1GP9FEeYLKH97oWes5XrrBGtsbu2nmHqwWl8_Nk-vOR-mHuar0Zx5siogk0OMKkyVk"/>
+</div>
+<div class="p-unit-lg flex flex-col flex-grow">
+<div class="mb-unit-md flex-grow">
+<h3 class="text-headline-sm font-headline-sm text-primary-container mb-unit-xs">Indo Brilian Products</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-unit-md leading-relaxed">Various processed seafood and canned food products.</p>
+<div class="flex items-center gap-unit-sm text-label-sm font-label-sm text-outline">
+<span class="material-symbols-outlined text-[18px] text-gold-accent">inventory</span>
+                                Packaging: Various Bulk Sizes
+                            </div>
+</div>
+<a href="contact.html" class="w-full bg-gold-accent text-on-tertiary-fixed font-label-md text-label-md py-3 rounded-lg hover:brightness-95 active:scale-[0.98] transition-all flex items-center justify-center gap-unit-sm shadow-sm text-center">
+                            Product Inquiry
+                            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-unit-xxl max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="relative overflow-hidden bg-primary-container rounded-xl p-unit-xl md:p-unit-xxl text-center text-on-primary">
+<!-- Background Decorative Pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none overflow-hidden">
+<div class="grid grid-cols-12 h-full w-full">
+<div class="col-span-1 border-r border-white/20"></div>
+<div class="col-span-1 border-r border-white/20"></div>
+<div class="col-span-1 border-r border-white/20"></div>
+<div class="col-span-1 border-r border-white/20"></div>
+</div>
+</div>
+<h2 class="relative z-10 text-headline-md font-headline-md mb-unit-md text-gold-accent">Partner with Global Logistics Experts</h2>
+<p class="relative z-10 text-body-lg font-body-lg max-w-3xl mx-auto mb-unit-xl opacity-90">Are you interested in distributing our products? Join our network of international retail and supply chain partners.</p>
+<div class="relative z-10 flex flex-wrap justify-center gap-unit-md">
+<a href="contact.html" class="bg-gold-accent text-on-tertiary-fixed px-unit-xl py-4 rounded-lg font-label-md text-label-md hover:brightness-105 transition-all shadow-md inline-block text-center">
+                        Become a Distributor
+                    </a>
+<button class="bg-transparent border border-outline-variant text-on-primary px-unit-xl py-4 rounded-lg font-label-md text-label-md hover:bg-white/10 transition-all">
+                        Download Catalog (PDF)
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Shared Component: Footer -->
+<footer class="w-full py-unit-xxl px-margin-mobile md:px-margin-desktop bg-primary-container grid grid-cols-1 md:grid-cols-4 gap-gutter text-on-primary">
+<div class="md:col-span-1">
+<h4 class="font-headline-sm text-headline-sm text-gold-accent mb-unit-md">PT Jaya Bersama Terang</h4>
+<p class="text-body-md font-body-md text-on-primary-container max-w-xs">A world-class FMCG manufacturer balancing industrial scale with consumer-facing quality.</p>
+</div>
+<div>
+<h5 class="text-label-md font-bold text-on-primary mb-unit-md">Explore</h5>
+<ul class="space-y-unit-sm">
+<li><a class="text-on-primary-container hover:text-gold-accent transition-colors text-body-md" href="index.html">Home</a></li>
+<li><a class="text-on-primary-container hover:text-gold-accent transition-colors text-body-md" href="about.html">About Us</a></li>
+<li><a class="text-gold-accent font-bold text-body-md" href="products.html">Products</a></li>
+<li><a class="text-on-primary-container hover:text-gold-accent transition-colors text-body-md" href="#">Distribution</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-label-md font-bold text-on-primary mb-unit-md">Contact Info</h5>
+<ul class="space-y-unit-sm">
+<li class="flex items-start gap-unit-sm text-on-primary-container text-body-md">
+<span class="material-symbols-outlined text-[20px] text-gold-accent">location_on</span>
+                    Head Office: Jakarta, Indonesia
+                </li>
+<li class="flex items-center gap-unit-sm text-on-primary-container text-body-md">
+<span class="material-symbols-outlined text-[20px] text-gold-accent">call</span>
+                    +62 21 1234 5678
+                </li>
+<li class="flex items-center gap-unit-sm text-on-primary-container text-body-md">
+<span class="material-symbols-outlined text-[20px] text-gold-accent">mail</span>
+                    info@jayabersamaterang.co.id
+                </li>
+</ul>
+</div>
+<div>
+<h5 class="text-label-md font-bold text-on-primary mb-unit-md">Certifications</h5>
+<div class="flex gap-unit-sm opacity-80">
+<div class="w-10 h-10 border border-gold-accent rounded flex items-center justify-center font-bold text-[10px] text-gold-accent">ISO</div>
+<div class="w-10 h-10 border border-gold-accent rounded flex items-center justify-center font-bold text-[10px] text-gold-accent">BPOM</div>
+<div class="w-10 h-10 border border-gold-accent rounded flex items-center justify-center font-bold text-[10px] text-gold-accent">HALAL</div>
+</div>
+<p class="mt-unit-xl text-label-sm font-label-sm text-on-primary-container opacity-60">
+                © 2024 PT Jaya Bersama Terang. All Rights Reserved.
+            </p>
+</div>
+</footer>
+<script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('nav-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            const isOpen = drawer.classList.contains('translate-x-0');
+            
+            if (isOpen) {
+                drawer.classList.remove('translate-x-0');
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            } else {
+                drawer.classList.add('translate-x-0');
+                drawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        // Micro-interaction for buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', function() {
+                this.style.transform = 'scale(0.98)';
+                this.style.opacity = '0.9';
+            });
+            btn.addEventListener('mouseup', function() {
+                this.style.transform = 'scale(1)';
+                this.style.opacity = '1';
+            });
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.opacity = '1';
+            });
+        });
+    </script>
+</body></html>

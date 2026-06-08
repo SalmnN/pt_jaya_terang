@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | PT Jaya Bersama Terang</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#673b00",
+                        "surface": "#fcf9f8",
+                        "outline": "#747782",
+                        "surface-dim": "#dcd9d9",
+                        "on-primary-fixed": "#001946",
+                        "primary": "#002b6d",
+                        "secondary-fixed-dim": "#ffb4ac",
+                        "secondary": "#bb0014",
+                        "inverse-on-surface": "#f3f0ef",
+                        "primary-fixed-dim": "#b1c6ff",
+                        "surface-variant": "#e5e2e1",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdcbd",
+                        "surface-tint": "#3b5ca5",
+                        "tertiary-fixed-dim": "#ffb86f",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-low": "#f6f3f2",
+                        "on-background": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#693c00",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#e51d24",
+                        "on-surface": "#1c1b1b",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#93000d",
+                        "primary-container": "#1d428a",
+                        "surface-container-high": "#eae7e7",
+                        "surface-container": "#f0eded",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#410002",
+                        "tertiary": "#482700",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#1f438b",
+                        "on-primary-container": "#93b2ff",
+                        "outline-variant": "#c4c6d2",
+                        "on-surface-variant": "#434651",
+                        "surface-bright": "#fcf9f8",
+                        "background": "#fcf9f8",
+                        "inverse-surface": "#313030",
+                        "on-tertiary-fixed": "#2c1600",
+                        "on-secondary-container": "#fffbff",
+                        "primary-fixed": "#d9e2ff",
+                        "secondary-fixed": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ff9c1a",
+                        "inverse-primary": "#b1c6ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["IBM Plex Sans"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["IBM Plex Sans"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["IBM Plex Sans"],
+                        "headline-lg": ["IBM Plex Sans"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .scrim-navy {
+            background: linear-gradient(rgba(0, 43, 109, 0.4), rgba(0, 43, 109, 0.4));
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 bg-primary-container border-b border-primary/20">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-white p-2 hover:bg-white/10 rounded-full transition-colors" onclick="toggleDrawer()">menu</button>
+<span class="text-body-lg font-headline-sm font-bold text-white">PT Jaya Bersama Terang</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-white/80 hover:text-on-tertiary-container transition-colors duration-200" href="index.html">Home</a>
+<a class="font-label-md text-label-md text-on-tertiary-container font-bold transition-colors duration-200" href="about.html">About Us</a>
+<a class="font-label-md text-label-md text-white/80 hover:text-on-tertiary-container transition-colors duration-200" href="products.html">Products</a>
+<a class="font-label-md text-label-md text-white/80 hover:text-on-tertiary-container transition-colors duration-200" href="#">Distribution</a>
+<a class="font-label-md text-label-md text-white/80 hover:text-on-tertiary-container transition-colors duration-200" href="contact.html">Contact</a>
+</nav>
+<div class="flex items-center">
+<button class="font-label-md text-label-md text-white px-4 py-2 border border-white/30 rounded-lg hover:bg-white/10 transition-all">EN/ID</button>
+</div>
+</header>
+<!-- NavigationDrawer Overlay -->
+<div class="fixed inset-0 bg-black/50 z-[60] hidden opacity-0 transition-opacity duration-300" id="drawer-overlay" onclick="toggleDrawer()"></div>
+<!-- NavigationDrawer -->
+<aside class="fixed top-0 left-0 h-full w-80 bg-surface z-[70] -translate-x-full transition-transform duration-300 shadow-md flex flex-col py-6" id="drawer">
+<div class="px-6 mb-8 flex justify-between items-center">
+<span class="text-headline-sm font-headline-sm text-primary">PT JBT</span>
+<button class="material-symbols-outlined text-on-surface-variant" onclick="toggleDrawer()">close</button>
+</div>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 mx-2 hover:bg-surface-container-high rounded-lg" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex items-center gap-4 bg-primary text-on-primary font-semibold rounded-lg px-4 py-3 mx-2" href="about.html">
+<span class="material-symbols-outlined">corporate_fare</span>
+<span class="font-label-md text-label-md">About Us</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 mx-2 hover:bg-surface-container-high rounded-lg" href="products.html">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-md text-label-md">Products</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 mx-2 hover:bg-surface-container-high rounded-lg" href="#">
+<span class="material-symbols-outlined">local_shipping</span>
+<span class="font-label-md text-label-md">Distribution</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 mx-2 hover:bg-surface-container-high rounded-lg" href="contact.html">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-md text-label-md">Contact</span>
+</a>
+</div>
+</aside>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative h-[530px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAchh1-9GyBIQ0wZvfuWzk1gX6enh1cKFYTw7adJoa-8XpEz0Sgq6Pwe9RudDzBaaNFveI7nLcSEAmunvKbGhChkPwzuNyrebmSx0KfaiU6oR4Ofdbygn5t4N1_IxdG4M5bZPBUr6n6pBskmlup26GPhUWt-LjY-X7ZaXkzvDC2W4QJbNcpzW_vOlLmRFMLNYJiCLlh9IdthjieomsT7O4BP4e7zYQvIcxpbWgD-7DY_l0fEA40RSkhCkk6ej6vGx4GenX7z9yc4V4')"></div>
+<div class="absolute inset-0 scrim-navy opacity-70"></div>
+<div class="relative z-10 text-center px-margin-mobile">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-4">About Our Legacy</h1>
+<p class="font-body-lg text-body-lg text-white/90 max-w-2xl mx-auto">Pioneering excellence in consumer goods through precision manufacturing and global logistics mastery.</p>
+</div>
+</section>
+<!-- Intro Section -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<span class="text-on-tertiary-container font-label-md tracking-widest uppercase">Our Foundation</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-primary">Decades of Industrial Leadership</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Founded on the principles of reliability and logistical mastery, PT Jaya Bersama Terang has evolved from a regional distributor into a world-class FMCG powerhouse. Our journey is marked by a relentless pursuit of culinary excellence and supply chain efficiency.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Today, we stand at the intersection of traditional quality and modern innovation, operating state-of-the-art facilities that serve international retail partners across multiple continents. Every product that leaves our facility carries our seal of unwavering integrity.</p>
+</div>
+<div class="relative h-96 rounded-lg overflow-hidden shadow-xl border-4 border-surface-container-high">
+<img alt="Corporate Boardroom" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFKq249QHnldxV8mWTDY6Zc61-8nD0PbZT31EhC_gopG2f2CJFxVxpUgJzYx06wm0gw74jfCSMvrwW9klHQyyYQQQF0b69IrxUqzQtRzZgTKXDsHwxesIu8EqRGurbqPeqqSh87UPNY8FcRM-5JCO3SaBExTuQ2jhJzHi2NvyiRnIqxd2-cda6isaVH9Yen34mCxMyYfqgza2Xl4mNedKMFn_8DQJdCfkUVQrMdTmfu3JS6ogi8_cX3v483OvqL_ME2CYQDAdRQfw"/>
+</div>
+</div>
+</section>
+<!-- Vision & Mission -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop bg-surface">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="p-10 bg-white border border-outline-variant rounded-lg group hover:border-on-tertiary-container transition-all duration-300">
+<span class="material-symbols-outlined text-on-tertiary-container text-5xl mb-6" style="font-variation-settings: 'FILL' 1;">visibility</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Our Vision</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">To be the global benchmark in FMCG manufacturing, recognized for our commitment to sustainable quality and logistical precision that enriches consumer lives worldwide.</p>
+</div>
+<div class="p-10 bg-primary-container text-on-primary rounded-lg group transition-all duration-300 shadow-lg">
+<span class="material-symbols-outlined text-on-tertiary-container text-5xl mb-6">rocket_launch</span>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Our Mission</h3>
+<ul class="space-y-4">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-body-md text-body-md text-white/90">Implementing world-class manufacturing standards across all product lines.</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-body-md text-body-md text-white/90">Fostering long-term value for our global stakeholders and partners.</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-body-md text-body-md text-white/90">Optimizing distribution networks for maximum freshness and reliability.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Statistics Section -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop bg-primary text-on-primary relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+<svg class="w-full h-full text-on-tertiary-container fill-current" viewbox="0 0 100 100">
+<path d="M0 100 L100 0 L100 100 Z"></path>
+</svg>
+</div>
+<div class="max-w-container-max mx-auto relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div class="space-y-2">
+<div class="font-headline-lg text-headline-md md:text-headline-lg text-on-tertiary-container">25+</div>
+<div class="font-label-md text-label-md text-white/70 uppercase tracking-widest">Years of Experience</div>
+<div class="w-12 h-1 bg-secondary mx-auto mt-4"></div>
+</div>
+<div class="space-y-2">
+<div class="font-headline-lg text-headline-md md:text-headline-lg text-on-tertiary-container">150+</div>
+<div class="font-label-md text-label-md text-white/70 uppercase tracking-widest">Product Categories</div>
+<div class="w-12 h-1 bg-secondary mx-auto mt-4"></div>
+</div>
+<div class="space-y-2">
+<div class="font-headline-lg text-headline-md md:text-headline-lg text-on-tertiary-container">30+</div>
+<div class="font-label-md text-label-md text-white/70 uppercase tracking-widest">Distribution Countries</div>
+<div class="w-12 h-1 bg-secondary mx-auto mt-4"></div>
+</div>
+<div class="space-y-2">
+<div class="font-headline-lg text-headline-md md:text-headline-lg text-on-tertiary-container">500+</div>
+<div class="font-label-md text-label-md text-white/70 uppercase tracking-widest">Business Partners</div>
+<div class="w-12 h-1 bg-secondary mx-auto mt-4"></div>
+</div>
+</div>
+</section>
+<!-- Core Values Section -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-primary mb-4">Our Core Values</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">The guiding principles that drive every decision and action within our global organization.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Excellence -->
+<div class="p-8 bg-white border border-outline-variant rounded-lg text-center group transition-all duration-300 hover:shadow-lg hover:border-primary">
+<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-6 transition-colors group-hover:bg-primary">
+<span class="material-symbols-outlined text-primary group-hover:text-on-tertiary-container transition-colors" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-3">Excellence</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">We pursue perfection in every manufacturing phase, from sourcing raw materials to final packaging.</p>
+</div>
+<!-- Integrity -->
+<div class="p-8 bg-white border border-outline-variant rounded-lg text-center group transition-all duration-300 hover:shadow-lg hover:border-primary">
+<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-6 transition-colors group-hover:bg-primary">
+<span class="material-symbols-outlined text-primary group-hover:text-on-tertiary-container transition-colors" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-3">Integrity</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Unwavering transparency and ethical conduct are at the core of our relationships with all stakeholders.</p>
+</div>
+<!-- Innovation -->
+<div class="p-8 bg-white border border-outline-variant rounded-lg text-center group transition-all duration-300 hover:shadow-lg hover:border-primary">
+<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-6 transition-colors group-hover:bg-primary">
+<span class="material-symbols-outlined text-primary group-hover:text-on-tertiary-container transition-colors" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-3">Innovation</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Continuously evolving our logistics and manufacturing processes to stay ahead of global market trends.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Download Section -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop bg-surface-container">
+<div class="max-w-container-max mx-auto p-10 bg-white rounded-lg flex flex-col md:flex-row items-center justify-between gap-8 shadow-md border border-outline-variant">
+<div class="flex items-center gap-8">
+<div class="p-4 bg-primary-container rounded-lg text-on-tertiary-container">
+<span class="material-symbols-outlined text-4xl">description</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Corporate Overview</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Get a detailed look into our operations, portfolio, and global impact.</p>
+</div>
+</div>
+<button class="flex items-center gap-2 bg-tertiary-container text-on-tertiary-container px-8 py-4 rounded-lg font-label-md text-label-md hover:brightness-110 active:scale-95 transition-all shadow-md font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined">download</span>
+                    Download Company Profile PDF
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-12 bg-primary-container text-white">
+<div class="md:col-span-1">
+<div class="font-headline-sm text-headline-sm text-on-tertiary-container mb-6">PT Jaya Bersama Terang</div>
+<p class="font-body-md text-body-md text-white/70 mb-4">Delivering world-class logistics and manufacturing excellence since our inception.</p>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-tertiary-container mb-4 uppercase tracking-wider font-bold">Navigation</h5>
+<ul class="space-y-3">
+<li><a class="font-label-sm text-label-sm text-white/70 hover:text-on-tertiary-container transition-colors" href="index.html">Home</a></li>
+<li><a class="font-label-sm text-label-sm text-on-tertiary-container font-bold" href="about.html">About</a></li>
+<li><a class="font-label-sm text-label-sm text-white/70 hover:text-on-tertiary-container transition-colors" href="products.html">Products</a></li>
+<li><a class="font-label-sm text-label-sm text-white/70 hover:text-on-tertiary-container transition-colors" href="#">Distribution</a></li>
+<li><a class="font-label-sm text-label-sm text-white/70 hover:text-on-tertiary-container transition-colors" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-tertiary-container mb-4 uppercase tracking-wider font-bold">Headquarters</h5>
+<p class="font-body-md text-body-md text-white/70 leading-relaxed">
+                Sudirman Central Business District<br/>
+                Jakarta 12190, Indonesia
+            </p>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-tertiary-container mb-4 uppercase tracking-wider font-bold">Connect</h5>
+<div class="flex gap-4">
+<a class="text-white/70 hover:text-on-tertiary-container p-2 bg-white/10 rounded-full" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-white/70 hover:text-on-tertiary-container p-2 bg-white/10 rounded-full" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-white/70 hover:text-on-tertiary-container p-2 bg-white/10 rounded-full" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+<p class="mt-8 font-label-sm text-label-sm text-white/50">© 2024 PT Jaya Bersama Terang. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            const isVisible = drawer.classList.contains('translate-x-0');
+            
+            if (isVisible) {
+                drawer.classList.remove('translate-x-0');
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+                overlay.classList.remove('opacity-100');
+            } else {
+                drawer.classList.add('translate-x-0');
+                drawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.classList.add('opacity-100'), 10);
+            }
+        }
+    </script>
+</body></html>
